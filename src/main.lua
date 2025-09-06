@@ -1,6 +1,6 @@
 local lg = love.graphics
-local bf = require('libraries.breezefield')
 
+local world = require('world')
 local Player = require('player')
 
 local player
@@ -10,9 +10,9 @@ love.load = function()
 end
 
 love.update = function(dt)
-    
+   world:update(dt) 
 end
 
 love.draw = function()
-    lg.print(player.x, 10, 10)
+    world:draw()
 end
